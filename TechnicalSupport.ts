@@ -1,10 +1,5 @@
-import { Support } from './Support';
+import { Support, UpdateTicketType } from './Support';
 import { Ticket } from './Ticket';
-
-export type UpdateTicketType = {
-  ticket: Ticket;
-  description: string;
-};
 
 export class TechnicalSupport implements Support {
   openTicket(ticket: Ticket) {

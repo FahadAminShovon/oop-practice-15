@@ -1,14 +1,10 @@
-import { Support } from './Support';
+import { Support, UpdateTicketType } from './Support';
 import { Ticket } from './Ticket';
 
 type SupportTicketType = {
   support: Support;
   ticket: Ticket;
 };
-
-type UpdateTicketType = {
-  description: string;
-} & SupportTicketType;
 
 export class SupportService {
   openTicket({ support, ticket }: SupportTicketType) {
@@ -19,7 +15,11 @@ export class SupportService {
     support.completeTicket(ticket);
   }
 
-  updateTicket({ support, ticket, description }: UpdateTicketType) {
+  updateTicket({
+    support,
+    ticket,
+    description,
+  }: SupportTicketType & UpdateTicketType) {
     support.updateTicket({ ticket, description });
   }
 }

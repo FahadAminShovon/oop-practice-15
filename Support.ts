@@ -8,5 +8,5 @@ export type UpdateTicketType = {
 export interface Support {
   openTicket: (ticket: Ticket) => void;
   completeTicket: (ticket: Ticket) => void;
-  updateTicket: (obj: UpdateTicketType) => void;
+  updateTicket: (ticketUpdate: UpdateTicketType) => void;
 }

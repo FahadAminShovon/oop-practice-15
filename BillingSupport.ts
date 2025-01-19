@@ -1,5 +1,4 @@
-import { Support } from './Support';
-import { UpdateTicketType } from './TechnicalSupport';
+import { Support, UpdateTicketType } from './Support';
 import { Ticket } from './Ticket';
 
 export class BillingSupport implements Support {
